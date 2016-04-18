@@ -21,6 +21,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'vcr'
   gem 'database_cleaner'
+  gem 'capybara'
 end
 
 group :development do
