@@ -4,8 +4,8 @@ class Station
   end
 
   def default_distance_search
-    service = StationService.new(@zip)
-    
+    service = StationService.new
+    service.distance_search(location: @zip, radius: 6)
 
   end
 end
