@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def index
-    @stations = Station.new(params["q"]).default_distance_search
+    @stations = Station.default_distance_search(params["q"])
   end
 end

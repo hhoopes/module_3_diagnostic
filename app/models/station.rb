@@ -1,11 +1,11 @@
 class Station
-  def initialize(zip)
-    @zip = zip
-  end
+  # def initialize(zip)
+  #   @zip = zip
+  # end
 
-  def default_distance_search
+  def self.default_distance_search(zip)
     service = StationService.new
-    service.distance_search(location: @zip, radius: 6)
+    service.distance_search(location: zip, radius: 6)
 
   end
 end
