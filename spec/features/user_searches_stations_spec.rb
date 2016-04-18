@@ -4,8 +4,8 @@ RSpec.feature "search", :type => :feature do
   scenario"user searches from index" do
     visit '/'
 
-    fill_in "Search", with: "80203"
-    click_link "Locate"
+    find(".form-control").set("80203")
+    click_button "Locate"
 
     expect(current_page).to eq("/search?zip=80203")
     within ".results" do
